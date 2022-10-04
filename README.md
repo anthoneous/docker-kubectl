@@ -1,15 +1,19 @@
 # docker-kubectl
 
-This repo is a portable version of kubectl 1.8.0 for older EKS configuration.
+This repo is a portable version of kubectl for older EKS configurations.
 
-### Add alias to bash profile
+### Add the following lines to bash profile
 
 ```bash
-alias kubectl-1.8.0='docker run --rm -it -v $HOME/.kube:/root/.kube ghcr.io/anthoneous/kubectl:1.8.0 kubectl'
+export KUBEDOCKER='1.10.7'
+```
+
+```bash
+alias kubectl-docker='docker run --rm -it -v $HOME/.kube:/root/.kube ghcr.io/anthoneous/kubectl:$KUBEDOCKER kubectl'
 ```
 
 ### Test command
 
 ```bash
-kubectl-1.8.0 version
+kubectl-docker version
 ```
