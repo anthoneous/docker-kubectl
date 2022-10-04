@@ -9,7 +9,7 @@ export KUBEDOCKER='1.10.7'
 ```
 
 ```bash
-alias kubectl-docker='docker run --rm -it -v $HOME/.kube:/root/.kube ghcr.io/anthoneous/kubectl:$KUBEDOCKER kubectl'
+alias kubectl-docker='docker run --rm -v $HOME/.kube:/root/.kube ghcr.io/anthoneous/kubectl:$KUBEDOCKER kubectl'
 ```
 
 ### Test command
