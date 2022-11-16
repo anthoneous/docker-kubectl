@@ -1,4 +1,4 @@
-KUBEVERSION:=1.10.7
+KUBEVERSION:=1.18.20
 IMAGEREPO:=ghcr.io/anthoneous/kubectl
 GITHUB_USER:=anthoneous
 
