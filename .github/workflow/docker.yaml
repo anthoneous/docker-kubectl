@@ -1,0 +1,18 @@
+---
+name: Automation for Docker Kubectl
+on:
+  push:
+    - main
+env:
+  GITHUB_TOKEN: ${{secrets.ORG_GITHUB_TOKEN}}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker login
+        run: make login
+      - name: docker build
+        run: make build
+      - name: docker push
+        run: make push
