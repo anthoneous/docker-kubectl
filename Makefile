@@ -1,5 +1,6 @@
 KUBEVERSION:=1.10.7
 IMAGEREPO:=ghcr.io/anthoneous/kubectl
+GITHUB_USER:=anthoneous
 
 define KUBECTL
 docker run --rm \
@@ -10,7 +11,7 @@ endef
 
 
 .PHONY: all
-all: build test push
+all: login build test push
 
 .PHONY: build
 build:
@@ -26,3 +27,7 @@ test:
 .PHONY: push
 push:
 	docker push $(IMAGEREPO):$(KUBEVERSION)
+
+.PHONY: login
+login:
+	echo $(GITHUB_TOKEN) | docker login ghcr.io -u $(GITHUB_USER) --password-stdin
