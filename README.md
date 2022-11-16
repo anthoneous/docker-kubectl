@@ -17,3 +17,12 @@ alias kubectl-docker='docker run --rm -v $HOME/.kube:/root/.kube ghcr.io/anthone
 ```bash
 kubectl-docker version
 ```
+
+### Makefile commands
+
+```makefile
+make all
+make build
+make test
+make push
+```
