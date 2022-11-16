@@ -2,7 +2,8 @@
 name: Automation for Docker Kubectl
 on:
   push:
-    - main
+    branches:
+      - main
 env:
   GITHUB_TOKEN: ${{secrets.ORG_GITHUB_TOKEN}}
 
