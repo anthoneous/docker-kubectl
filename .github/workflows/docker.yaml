@@ -6,7 +6,6 @@ on:
       - main
 env:
   GITHUB_TOKEN: ${{secrets.ORG_GITHUB_TOKEN}}
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
