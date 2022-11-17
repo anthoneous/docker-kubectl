@@ -1,6 +1,7 @@
 ---
 name: Automation for Docker Kubectl
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
