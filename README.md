@@ -5,7 +5,7 @@ This repo is a portable version of kubectl for older EKS configurations.
 ### Add the following lines to bash profile
 
 ```bash
-export KUBEDOCKER='1.10.7'
+export KUBEDOCKER='1.10.7' # change to version needed here
 ```
 
 ```bash
